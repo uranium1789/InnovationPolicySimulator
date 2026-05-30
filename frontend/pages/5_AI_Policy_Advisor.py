@@ -69,13 +69,13 @@ if st.button("🚀 Generate Policy Advice"):
                 Project Context:
                 This project focuses on:
 
-                - Patent Generation
-                - Innovation Policy
-                - R&D Investment
-                - Foreign Direct Investment
-                - Trade Openness
-                - Digital Infrastructure
-                - Innovation-led Economic Growth
+         Patent Generation
+         Innovation Policy
+         R&D Investment
+         Foreign Direct Investment
+         Trade Openness
+         Digital Infrastructure
+         Innovation-led Economic Growth
 
                 User Question:
                 {question}
