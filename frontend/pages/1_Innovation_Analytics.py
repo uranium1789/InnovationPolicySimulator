@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# ----------------------------------------------------
+     
 # PAGE CONFIG
-# ----------------------------------------------------
+     
 
 st.set_page_config(
     page_title="Innovation Analytics Dashboard",
@@ -14,18 +14,18 @@ st.set_page_config(
 
 st.title("📊 Innovation Analytics Dashboard")
 
-# ----------------------------------------------------
+     
 # LOAD DATA
-# ----------------------------------------------------
+     
 
 df = pd.read_excel(
     "data/innovation_dataset.xlsx",
     engine="openpyxl"
 )
 
-# ----------------------------------------------------
+     
 # CLEAN DATA
-# ----------------------------------------------------
+     
 
 numeric_cols = [
     "Patent (NR)",
@@ -46,9 +46,9 @@ for col in numeric_cols:
             errors="coerce"
         )
 
-# ----------------------------------------------------
+     
 # KPI SECTION
-# ----------------------------------------------------
+     
 
 latest_patent = df["Patent (NR)"].dropna().iloc[-1]
 
@@ -84,9 +84,9 @@ with col4:
 
 st.divider()
 
-# ----------------------------------------------------
+     
 # ROW 1
-# ----------------------------------------------------
+     
 
 col1, col2 = st.columns(2)
 
@@ -120,9 +120,9 @@ with col2:
         use_container_width=True
     )
 
-# ----------------------------------------------------
+     
 # ROW 2
-# ----------------------------------------------------
+     
 
 col3, col4 = st.columns(2)
 
@@ -156,9 +156,9 @@ with col4:
         use_container_width=True
     )
 
-# ----------------------------------------------------
+     
 # ROW 3
-# ----------------------------------------------------
+     
 
 col5, col6 = st.columns(2)
 
@@ -192,9 +192,9 @@ with col6:
         use_container_width=True
     )
 
-# ----------------------------------------------------
+     
 # DATA TABLE
-# ----------------------------------------------------
+     
 
 with st.expander("📄 View Dataset"):
     st.dataframe(df)

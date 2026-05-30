@@ -1,9 +1,9 @@
 import streamlit as st
 import google.generativeai as genai
 
-# =====================================================
+   
 # PAGE CONFIG
-# =====================================================
+   
 
 st.set_page_config(
     page_title="AI Policy Advisor",
@@ -11,21 +11,21 @@ st.set_page_config(
     layout="wide"
 )
 
-# =====================================================
+   
 # GEMINI CONFIG
-# =====================================================
+   
 
 genai.configure(
-    api_key="AQ.Ab8RN6J2nLyoXHnL5Lenj9NI-Vgp8H3H7Ra0vCo8m2CnV4ZWcw"
+    api_key="AQ.Ab8RN6I5LDpZMawhq21LndC30-NDGDnW9d1Ku7jHeH41UHEiEw"
 )
 
 model = genai.GenerativeModel(
     "gemini-2.5-flash"
 )
 
-# =====================================================
+   
 # PAGE HEADER
-# =====================================================
+   
 
 st.title(" AI Policy Advisor")
 
@@ -39,9 +39,9 @@ st.write(
 
 st.divider()
 
-# =====================================================
+   
 # QUESTION INPUT
-# =====================================================
+   
 
 question = st.text_area(
     "Enter Your Policy Question",
@@ -49,9 +49,9 @@ question = st.text_area(
     placeholder="Example: How can India increase patent generation by 20%?"
 )
 
-# =====================================================
+   
 # GENERATE RESPONSE
-# =====================================================
+   
 
 if st.button("🚀 Generate Policy Advice"):
 

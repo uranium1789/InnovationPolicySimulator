@@ -5,18 +5,18 @@ from xgboost import XGBRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
-# -------------------------
+ 
 # LOAD DATA
-# -------------------------
+ 
 
 df = pd.read_excel(
     "data/innovation_dataset.xlsx",
     engine="openpyxl"
 )
 
-# -------------------------
+
 # CLEAN DATA
-# -------------------------
+
 
 features = [
     "GDPPC",
@@ -39,9 +39,9 @@ for col in features + [target]:
 
 df = df.dropna()
 
-# -------------------------
+ 
 # TRAIN
-# -------------------------
+ 
 
 X = df[features]
 y = df[target]
@@ -68,9 +68,9 @@ score = r2_score(y_test, pred)
 
 print(f"R2 Score = {score:.4f}")
 
-# -------------------------
+ 
 # SAVE MODEL
-# -------------------------
+ 
 
 joblib.dump(
     model,

@@ -3,9 +3,9 @@ import pandas as pd
 import joblib
 from pathlib import Path
 
-# =====================================================
+   
 # PAGE CONFIG
-# =====================================================
+   
 
 st.set_page_config(
     page_title="Budget Impact Simulator",
@@ -22,9 +22,9 @@ st.write(
     """
 )
 
-# =====================================================
+   
 # LOAD MODEL
-# =====================================================
+   
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -32,9 +32,9 @@ model = joblib.load(
     BASE_DIR / "models" / "xgb_model.pkl"
 )
 
-# =====================================================
+   
 # INPUTS
-# =====================================================
+   
 
 st.subheader("Current Scenario")
 
@@ -74,9 +74,9 @@ with col2:
         value=45.0
     )
 
-# =====================================================
+   
 # R&D SCENARIO
-# =====================================================
+   
 
 st.subheader("Funding Simulation")
 
@@ -101,9 +101,9 @@ broadband = st.slider(
     20.0
 )
 
-# =====================================================
+   
 # SIMULATE
-# =====================================================
+   
 
 if st.button("Run Simulation"):
 

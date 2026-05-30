@@ -12,9 +12,9 @@ st.set_page_config(
 
 st.title(" SHAP Explainability Dashboard")
 
-# ---------------------------------------------------
+         -
 # LOAD MODEL
-# ---------------------------------------------------
+         -
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -22,9 +22,9 @@ model = joblib.load(
     BASE_DIR / "models" / "xgb_model.pkl"
 )
 
-# ---------------------------------------------------
+         -
 # LOAD DATA
-# ---------------------------------------------------
+         -
 
 df = pd.read_excel(
     BASE_DIR / "data" / "innovation_dataset.xlsx",
@@ -54,9 +54,9 @@ df = df.dropna()
 
 X = df[features]
 
-# ---------------------------------------------------
+         -
 # SHAP
-# ---------------------------------------------------
+         -
 
 explainer = shap.TreeExplainer(model)
 
@@ -167,9 +167,9 @@ for feature in importance["Feature"].head(3):
 for i, rec in enumerate(recommendations, start=1):
     st.success(f"Recommendation {i}: {rec}")
 
-# =====================================================
+       
 # MODEL SUMMARY
-# =====================================================
+       
 
 st.divider()
 
